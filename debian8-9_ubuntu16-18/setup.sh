@@ -10,9 +10,9 @@
 # - 3 : Try execute "sed -i -e 's/\r$//' serveur_a2_debian9.sh" if you have ^M in the script
 
 if [[ $USER = "root" ]]; then
-	echo "/!\ Please do not use superuser"
+	echo "/!\ Please do not use root user"
 else
-	echo "Do you want install LAMP server (Apache, Mysql, PHP, PhpMyAdmin)? [y|n]"
+	echo "Do you want to install LAMP server (Apache, Mysql, PHP, PhpMyAdmin)? [y|n]"
 	read lamp
 	if [[ "$lamp" = "y" ]]; then
 		echo "############### LAMP INSTALLATION ################"
@@ -132,6 +132,9 @@ fi
 
 
 # RECAP
+
+echo "************ Installation Recap & installed Packages **************"
+
 if [[ "$lamp" = "y" ]]; then
 	echo "### LAMP ###"
 	echo "Installed Packages :"
@@ -174,3 +177,4 @@ if [[ "$lamp" = "y" ]]; then
 	# echo "- Chown folder /var/www/ to www-data user and group"
 fi
 
+echo "******************* END ******************"
