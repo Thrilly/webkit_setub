@@ -1,0 +1,1 @@
+UPDATE mysql.user SET plugin = '' WHERE User = 'root'; FLUSH PRIVILEGES;
